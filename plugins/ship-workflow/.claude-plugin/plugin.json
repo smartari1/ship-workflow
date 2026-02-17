@@ -2,14 +2,17 @@
   "name": "ship-workflow",
   "version": "1.2.0",
   "description": "Pre-commit workflow: auto-init, review, investigate, fix, update memory, and create detailed commits. Run /ship to execute the full pipeline.",
-  "author": "Ari Kliger",
-  "skills": [
-    "skills/init",
-    "skills/review-diff",
-    "skills/look",
-    "skills/fix-review",
-    "skills/update-memory",
-    "skills/big-commit",
-    "skills/ship"
+  "author": {
+    "name": "Ari Kliger",
+    "url": "https://github.com/smartari1"
+  },
+  "repository": "https://github.com/smartari1/ship-workflow",
+  "license": "MIT",
+  "keywords": [
+    "code-review",
+    "pre-commit",
+    "memory",
+    "workflow",
+    "claude-code"
   ]
 }
