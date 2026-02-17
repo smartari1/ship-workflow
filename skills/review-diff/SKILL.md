@@ -18,8 +18,8 @@ PROJECT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
 ```
 
 Read whichever exist:
-- `$PROJECT_ROOT/.claude/cc10x/activeContext.md` (first 60 lines)
-- `$PROJECT_ROOT/.claude/cc10x/patterns.md` (first 60 lines)
+- `$PROJECT_ROOT/.claude/ship-memory/activeContext.md` (first 60 lines)
+- `$PROJECT_ROOT/.claude/ship-memory/patterns.md` (first 60 lines)
 - Claude auto-memory MEMORY.md (search `~/.claude/projects/` for a directory matching the project name, first 80 lines)
 
 ## Step 1: Gather the Diff

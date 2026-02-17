@@ -1,7 +1,7 @@
 ---
 name: update-memory
 description: Analyze the current git diff and update project memory files with new patterns, architecture changes, and progress
-argument-hint: "[scope: all | cc10x | claude-memory]"
+argument-hint: "[scope: all | ship-memory | claude-memory]"
 allowed-tools: Bash, Read, Write, Edit, Glob, Grep
 ---
 
@@ -21,15 +21,15 @@ Read the current diff and locate existing memory files:
 
 1. Run `git diff --stat` and `git diff --staged --stat` to see what changed
 2. Look for memory files in these standard locations (read whichever exist):
-   - `$PROJECT_ROOT/.claude/cc10x/activeContext.md`
-   - `$PROJECT_ROOT/.claude/cc10x/patterns.md`
-   - `$PROJECT_ROOT/.claude/cc10x/progress.md`
+   - `$PROJECT_ROOT/.claude/ship-memory/activeContext.md`
+   - `$PROJECT_ROOT/.claude/ship-memory/patterns.md`
+   - `$PROJECT_ROOT/.claude/ship-memory/progress.md`
    - Claude auto-memory MEMORY.md (search `~/.claude/projects/` for a directory matching the project name)
 
-If cc10x files don't exist, create them with appropriate headers:
-- `activeContext.md`: `<!-- CC10X Session Memory - Do not delete this file -->`
-- `patterns.md`: `<!-- CC10X Patterns - Do not delete this file -->`
-- `progress.md`: `<!-- CC10X Progress - Do not delete this file -->`
+If ship-memory files don't exist, create them with appropriate headers:
+- `activeContext.md`: `<!-- Ship-Memory Session Memory - Do not delete this file -->`
+- `patterns.md`: `<!-- Ship-Memory Patterns - Do not delete this file -->`
+- `progress.md`: `<!-- Ship-Memory Progress - Do not delete this file -->`
 
 ## Step 2: Read the Full Diff
 
@@ -47,7 +47,7 @@ Skip purely cosmetic changes (formatting, import reordering).
 The user may pass a scope argument: `$ARGUMENTS`
 
 - **`all`** (default if no argument): Update all memory targets
-- **`cc10x`**: Only update `.claude/cc10x/` files
+- **`ship-memory`**: Only update `.claude/ship-memory/` files
 - **`claude-memory`**: Only update the Claude MEMORY.md
 
 ## Step 4: Classify What Changed
@@ -86,7 +86,7 @@ Follow these rules strictly:
 - Use `code formatting` for file paths, function names, type names
 - Group related items under clear headings
 - **Remove outdated entries** — don't just append. If a pattern was replaced, delete the old one.
-- Preserve the `<!-- CC10X ... -->` comment headers in cc10x files
+- Preserve the `<!-- Ship-Memory ... -->` comment headers in ship-memory files
 - Keep MEMORY.md under 120 lines (it's loaded into every system prompt)
 - Keep activeContext.md "Recent Changes" to last ~10 entries (trim oldest)
 - Deduplicate: if the same knowledge exists in multiple files, keep the canonical version and remove redundant copies

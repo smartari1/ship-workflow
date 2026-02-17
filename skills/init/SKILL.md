@@ -26,9 +26,9 @@ Check if already initialized:
 Search for memory files the project may already have. Check ALL of these locations:
 
 ### CC10x Memory (project-level)
-- `$PROJECT_ROOT/.claude/cc10x/activeContext.md`
-- `$PROJECT_ROOT/.claude/cc10x/patterns.md`
-- `$PROJECT_ROOT/.claude/cc10x/progress.md`
+- `$PROJECT_ROOT/.claude/ship-memory/activeContext.md`
+- `$PROJECT_ROOT/.claude/ship-memory/patterns.md`
+- `$PROJECT_ROOT/.claude/ship-memory/progress.md`
 
 ### Claude Auto-Memory (user-level)
 Search `~/.claude/projects/` for a directory whose name matches or contains the project directory name. Inside it, look for `memory/MEMORY.md`.
@@ -50,11 +50,11 @@ Record which files exist and which are missing.
 
 For each missing file, create it with useful starter content. **Never overwrite existing files.**
 
-### If `.claude/cc10x/` directory is missing, create all three:
+### If `.claude/ship-memory/` directory is missing, create all three:
 
 **activeContext.md:**
 ```markdown
-<!-- CC10X Session Memory - Do not delete this file -->
+<!-- Ship-Memory Session Memory - Do not delete this file -->
 # Active Context
 
 ## Current Focus
@@ -66,7 +66,7 @@ For each missing file, create it with useful starter content. **Never overwrite 
 
 **patterns.md:**
 ```markdown
-<!-- CC10X Patterns - Do not delete this file -->
+<!-- Ship-Memory Patterns - Do not delete this file -->
 # Patterns
 
 ## Architecture
@@ -78,7 +78,7 @@ For each missing file, create it with useful starter content. **Never overwrite 
 
 **progress.md:**
 ```markdown
-<!-- CC10X Progress - Do not delete this file -->
+<!-- Ship-Memory Progress - Do not delete this file -->
 # Progress
 
 ## Current Workflow
@@ -137,10 +137,10 @@ Create `$PROJECT_ROOT/.claude/ship-config.json`:
   "initialized": "2026-02-17T10:00:00Z",
   "projectRoot": "/path/to/project",
   "memory": {
-    "cc10x": {
-      "activeContext": ".claude/cc10x/activeContext.md",
-      "patterns": ".claude/cc10x/patterns.md",
-      "progress": ".claude/cc10x/progress.md"
+    "ship-memory": {
+      "activeContext": ".claude/ship-memory/activeContext.md",
+      "patterns": ".claude/ship-memory/patterns.md",
+      "progress": ".claude/ship-memory/progress.md"
     },
     "claudeAutoMemory": "~/.claude/projects/<dir>/memory/MEMORY.md"
   },
@@ -148,7 +148,7 @@ Create `$PROJECT_ROOT/.claude/ship-config.json`:
 }
 ```
 
-Use relative paths for cc10x (project-level) and absolute for Claude auto-memory (user-level). Set `claudeAutoMemory` to `null` if the directory doesn't exist yet.
+Use relative paths for ship-memory (project-level) and absolute for Claude auto-memory (user-level). Set `claudeAutoMemory` to `null` if the directory doesn't exist yet.
 
 ## Step 6: Report
 
@@ -163,9 +163,9 @@ Output a clean summary:
 ### Memory Files
 | File | Status |
 |------|--------|
-| `.claude/cc10x/activeContext.md` | Created / Already existed |
-| `.claude/cc10x/patterns.md` | Created / Already existed |
-| `.claude/cc10x/progress.md` | Created / Already existed |
+| `.claude/ship-memory/activeContext.md` | Created / Already existed |
+| `.claude/ship-memory/patterns.md` | Created / Already existed |
+| `.claude/ship-memory/progress.md` | Created / Already existed |
 | `MEMORY.md` (auto-memory) | Created / Already existed / Not available |
 
 ### Next Steps

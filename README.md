@@ -32,7 +32,7 @@ No step is wasted.
 The first time you run `/ship` on any project, it **automatically initializes**:
 
 1. Detects your project type (React, Node, Python, etc.)
-2. Creates memory files (`.claude/cc10x/activeContext.md`, `patterns.md`, `progress.md`)
+2. Creates memory files (`.claude/ship-memory/activeContext.md`, `patterns.md`, `progress.md`)
 3. Seeds them with your project's structure
 4. Writes a config file (`.claude/ship-config.json`)
 5. Proceeds with the pipeline
@@ -66,7 +66,7 @@ Every skill also works standalone. Use `/review-diff` without the full pipeline.
 1. **Review** — Scans your diff. If everything is clean, skips straight to memory + commit.
 2. **Look** — If issues were found, investigates the flagged areas deeply before anyone touches code.
 3. **Fix** — Fixes each finding with full context. One at a time. Verify after each. Revert on failure.
-4. **Memory** — Captures what changed and why into `.claude/cc10x/` and `MEMORY.md`.
+4. **Memory** — Captures what changed and why into `.claude/ship-memory/` and `MEMORY.md`.
 5. **Commit** — Builds a detailed commit message, shows it to you, waits for your OK.
 
 ### Skip Steps
@@ -135,7 +135,7 @@ cp -r ship-workflow/skills/* ~/.claude/skills/
 
 `/ship` works with two layers of memory:
 
-### Project Memory (`.claude/cc10x/`)
+### Project Memory (`.claude/ship-memory/`)
 
 | File | Purpose |
 |------|---------|

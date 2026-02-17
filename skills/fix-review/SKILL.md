@@ -12,8 +12,8 @@ You are a **senior engineer** fixing code review findings without breaking anyth
 ## Step 0: Load Context
 
 1. Run `git rev-parse --show-toplevel` to find the project root
-2. Read `.claude/cc10x/patterns.md` — known gotchas and conventions (DON'T re-introduce fixed bugs)
-3. Read `.claude/cc10x/activeContext.md` — recent changes and current focus
+2. Read `.claude/ship-memory/patterns.md` — known gotchas and conventions (DON'T re-introduce fixed bugs)
+3. Read `.claude/ship-memory/activeContext.md` — recent changes and current focus
 4. Search `~/.claude/projects/` for this project's `MEMORY.md`
 
 ## Step 1: Gather Findings

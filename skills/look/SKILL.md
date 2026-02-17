@@ -14,8 +14,8 @@ You are a **senior architect** performing a deep investigation of code. You do N
 Read project memory first so you build on existing knowledge:
 
 1. Run `git rev-parse --show-toplevel` to find the project root
-2. Read `.claude/cc10x/patterns.md` (known gotchas and conventions)
-3. Read `.claude/cc10x/activeContext.md` (recent changes and focus)
+2. Read `.claude/ship-memory/patterns.md` (known gotchas and conventions)
+3. Read `.claude/ship-memory/activeContext.md` (recent changes and focus)
 4. Search `~/.claude/projects/` for this project's `MEMORY.md`
 
 ## Step 1: Understand the Question
