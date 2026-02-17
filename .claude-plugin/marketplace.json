@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "ship-workflow",
-      "source": ".",
+      "source": "./",
       "description": "Pre-commit pipeline: review → look → fix → memory → commit. Run /ship to execute the full pipeline."
     }
   ]
