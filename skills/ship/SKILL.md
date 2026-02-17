@@ -30,6 +30,27 @@ The user may pass: `$ARGUMENTS`
 
 ---
 
+### Step 0: Init Gate (Automatic)
+
+Before running any step, check if the project has been initialized:
+
+1. Run `git rev-parse --show-toplevel` to find the project root
+2. Check if `.claude/ship-config.json` exists at the project root
+
+**If config does NOT exist** — this is the first run. Invoke the `init` skill:
+
+```
+Skill(skill="init")
+```
+
+Wait for completion. Init will create memory files, scan the project, and write the config. Then continue to step 1.
+
+**If config exists** — skip init, proceed directly to step 1.
+
+This gate runs silently. No user interaction needed.
+
+---
+
 ### Step 1: Review Diff
 
 Invoke the `review-diff` skill to perform a full code review:

@@ -1,13 +1,14 @@
 {
   "name": "ship-workflow",
-  "version": "1.1.0",
-  "description": "Pre-commit workflow: update memory, review diff, fix findings, and create detailed commits. Includes /look for deep architecture investigation. Run /ship to execute the full pipeline.",
+  "version": "1.2.0",
+  "description": "Pre-commit workflow: auto-init, review, investigate, fix, update memory, and create detailed commits. Run /ship to execute the full pipeline.",
   "author": "Ari Kliger",
   "skills": [
-    "skills/update-memory",
+    "skills/init",
     "skills/review-diff",
-    "skills/fix-review",
     "skills/look",
+    "skills/fix-review",
+    "skills/update-memory",
     "skills/big-commit",
     "skills/ship"
   ]
